@@ -1,0 +1,149 @@
+/* src/components/Navbar.css */
+
+/* Space below fixed navbar */
+body {
+  padding-top: 80px;
+  background-color: #f7f9fb;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Modern white navbar */
+.navbar {
+  background-color: #fff;
+  border-bottom: 1px solid #e6e9ef;
+  padding: 0.75rem 1.5rem;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  z-index: 1000;
+}
+
+/* Navbar shadow when scrolled */
+.navbar.scrolled {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* Brand logo */
+.navbar-brand {
+  color: #1b1f24 !important;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand i {
+  color: #007bff;
+  font-size: 1.4rem;
+  margin-right: 0.4rem;
+}
+
+/* Nav links (center) */
+.nav-link {
+  color: #6c757d !important;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.25s ease;
+  position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #007bff !important;
+}
+
+/* Underline effect for active nav link */
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #007bff;
+  border-radius: 1px;
+}
+
+/* Buttons & icons (right section) */
+.btn-light {
+  background-color: #f2f4f8 !important;
+  color: #6c757d;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-light:hover {
+  background-color: #e9ecf1 !important;
+  transform: scale(1.05);
+}
+
+.btn-light i {
+  font-size: 1rem;
+}
+
+/* Profile dropdown */
+.dropdown-toggle img {
+  border: 2px solid #e0e0e0;
+  object-fit: cover;
+  transition: transform 0.2s ease;
+}
+
+.dropdown-toggle:hover img {
+  transform: scale(1.05);
+}
+
+.dropdown-menu {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 0;
+}
+
+.dropdown-item {
+  color: #495057;
+  font-size: 0.95rem;
+  padding: 0.6rem 1.2rem;
+  transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #f2f4f8;
+  color: #007bff;
+}
+
+/* Notification badge */
+.badge {
+  font-size: 0.6rem;
+  min-width: 16px;
+  min-height: 16px;
+  padding: 2px 5px;
+  border-radius: 50%;
+}
+
+/* Accent buttons (e.g. signup) */
+.btn-accent {
+  background: #007bff;
+  border-radius: 50px;
+  color: #fff !important;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.btn-accent:hover {
+  background: #0056d6;
+  transform: scale(1.05);
+}
+
+/* Responsive tweaks */
+@media (max-width: 991px) {
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+    margin: 0.4rem 0;
+  }
+
+  .dropdown-toggle span {
+    display: none;
+  }
+}

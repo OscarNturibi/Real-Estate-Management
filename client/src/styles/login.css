@@ -1,0 +1,34 @@
+/* Reset padding and margin */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Center the form */
+form {
+  width: 40%;
+  border-radius: 20px;
+  align-content: center;
+  font-size: 16px;
+  margin: 50px auto; /* top and bottom spacing added */
+  padding: 20px;
+  background-color: #f9f9f9; /* optional, for better visibility */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading style */
+h3 {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 60px;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+/* Border bottom class */
+.border-bottom {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 70px;
+  display: flex;
+}

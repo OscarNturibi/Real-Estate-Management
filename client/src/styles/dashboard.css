@@ -1,0 +1,141 @@
+/* ===========================
+   DASHBOARD LAYOUT STYLES
+   =========================== */
+
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Root variables for theme */
+:root {
+  --sidebar-bg: #042331;
+  --sidebar-header-bg: #063146;
+  --sidebar-text: #ffffff;
+  --hover-shift: 10px;
+  --transition-speed: 0.3s;
+  --font-main: 'Roboto', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: #f5f6fa;
+  color: #333;
+}
+
+/* Sidebar container */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 100%;
+  background: var(--sidebar-bg);
+  display: flex;
+  flex-direction: column;
+  transition: width var(--transition-speed) ease;
+  z-index: 1000;
+}
+
+/* Sidebar header / logo */
+.sidebar .logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 15px 20px;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--sidebar-text);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.sidebar .logo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* Sidebar navigation */
+.sidebar ul {
+  flex: 1;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 60px;
+  font-size: 18px;
+  color: var(--sidebar-text);
+  padding-left: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  transition: all var(--transition-speed) ease;
+}
+
+.sidebar ul li a i {
+  font-size: 20px;
+  min-width: 25px;
+}
+
+.sidebar ul li a:hover {
+  padding-left: calc(30px + var(--hover-shift));
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Main content area */
+.main-content {
+  margin-left: 240px;
+  padding: 30px;
+  min-height: 100vh;
+  transition: margin-left var(--transition-speed) ease;
+}
+
+/* Rented properties and messages cards */
+.main-content h2 {
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.main-content ul li {
+  background-color: #fff;
+  padding: 15px 20px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  .main-content {
+    margin-left: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+  .sidebar {
+    position: absolute;
+    left: -240px;
+  }
+
+  .sidebar.active {
+    left: 0;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+}

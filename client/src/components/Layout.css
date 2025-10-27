@@ -1,0 +1,33 @@
+/* src/components/Layout.css */
+
+.layout-wrapper {
+  background-color: #f7f9fb;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-content {
+  flex: 1;
+  margin-top: 90px; /* accounts for fixed navbar */
+  padding: 1rem 0;
+}
+
+.alert {
+  border-radius: 10px;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: opacity 0.4s ease;
+}
+
+.container {
+  max-width: 1200px;
+}
+
+/* Responsive padding */
+@media (max-width: 768px) {
+  .page-content {
+    margin-top: 70px;
+    padding: 0.5rem;
+  }
+}

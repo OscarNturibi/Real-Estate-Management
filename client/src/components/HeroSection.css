@@ -1,0 +1,50 @@
+.hero-section {
+  position: relative;
+  height: 90vh;
+background-image: url("../public/hero.jpg");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  max-width: 700px;
+}
+
+.hero-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.hero-subtitle {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-top: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn-warning {
+  background-color: #ffce00;
+  color: #000;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-warning:hover {
+  background-color: #f8b400;
+  transform: translateY(-2px);
+}

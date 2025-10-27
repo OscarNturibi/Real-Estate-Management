@@ -1,0 +1,76 @@
+/* Reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Container for owner login page */
+.owner-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  padding-top: 50px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.owner-login h3 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Form styling */
+.owner-login form {
+  width: 90%;
+  max-width: 500px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  font-size: 16px;
+}
+
+/* Labels and inputs */
+.owner-login .form-control-label {
+  font-weight: 500;
+  color: #444;
+}
+
+.owner-login .form-control {
+  width: 100%;
+  margin-top: 8px;
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+.owner-login .form-control.is-invalid {
+  border-color: #dc3545;
+}
+
+/* Buttons */
+.owner-login button {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+/* Footer link */
+.owner-login .border-top {
+  border-top: 1px solid #ccc;
+  margin-top: 30px;
+  padding-top: 20px;
+}
+
+/* Optional bottom border section (if reused) */
+.border-bottom {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 70px;
+  display: flex;
+  justify-content: center;
+}

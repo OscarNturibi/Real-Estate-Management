@@ -1,0 +1,113 @@
+/* ============================
+   Message Page Styling
+   ============================ */
+
+/* Dashboard / Sidebar Navigation */
+.dashboard {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 12px 24px;
+}
+
+.dashboard ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.dashboard .nav-link {
+  color: #333;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.dashboard .nav-link:hover {
+  color: #007bff;
+  transform: translateY(-2px);
+}
+
+.badge {
+  font-size: 0.8rem;
+  padding: 4px 8px;
+  border-radius: 10px;
+}
+
+/* ============================
+   Message List
+   ============================ */
+
+.messages-list {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 25px 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.messages-list h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+/* Message Cards */
+.message-card {
+  transition: all 0.3s ease;
+  border: 1px solid #e9ecef;
+  border-radius: 10px;
+}
+
+.message-card:hover {
+  background-color: #f8f9fa;
+  transform: translateY(-3px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.message-card .card-body {
+  padding: 18px 20px;
+}
+
+.message-card .card-title {
+  font-size: 1.1rem;
+  color: #222;
+}
+
+.message-card .card-text {
+  color: #555;
+  margin-top: 6px;
+  font-size: 0.95rem;
+}
+
+/* Unread Messages */
+.message-card.unread {
+  background-color: #eef6ff;
+  border-left: 4px solid #007bff;
+}
+
+/* Centered Empty State */
+.messages-list em {
+  color: #777;
+  font-size: 1rem;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .messages-list {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .dashboard .nav-link {
+    font-size: 16px;
+  }
+}
